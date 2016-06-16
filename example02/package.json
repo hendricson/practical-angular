@@ -1,0 +1,19 @@
+{
+  "name": "meetup01-example02",
+  "version": "1.0.0",
+  "description": "Example #02 for meetup #01",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hendricson/repository.git"
+  },
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}

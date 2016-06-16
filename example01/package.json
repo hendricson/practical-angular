@@ -1,0 +1,11 @@
+{
+  "name": "meetup01-example01",
+  "version": "1.0.0",
+  "description": "Example #01 for meetup #01",
+  "main": "webpack.config.js",
+  "license": "MIT",
+  "repository": {
+	  "type": "git",
+	  "url": "git://github.com/hendricson/repository.git"
+	}
+}
