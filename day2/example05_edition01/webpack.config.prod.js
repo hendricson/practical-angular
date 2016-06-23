@@ -1,16 +1,12 @@
-// webpack.config.dev.js
-var path = require('path')
-var webpack = require('webpack')
+// webpack.config.prod.js
+var path = require('path');
+var webpack = require('webpack');
 var ProvidePlugin = require('webpack/lib/ProvidePlugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  devtool: 'cheap-eval-source-map',
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
-    './src/index'
-  ],
+  devtool: 'source-map',
+  entry: ['./src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -21,7 +17,12 @@ module.exports = {
         $: 'jquery',
         jquery: 'jquery'
       }),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+      },
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
@@ -52,10 +53,9 @@ module.exports = {
     }, {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
       loader: "url?limit=10000&mimetype=image/svg+xml&name=./[name]/[hash].[ext]"
-    }]
-  },
-  devServer: {
-    contentBase: './dist',
-    hot: true
+    }, {
+	   test: /\.html$/,
+	   loader: "raw-loader"
+	}]
   }
 }

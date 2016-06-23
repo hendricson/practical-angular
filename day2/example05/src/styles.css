@@ -1,21 +1,21 @@
-body {
+body.body-meetup {
  background: url("paper.png");
 }
 
-.header{
+.header-meetup{
   font-size: 2em;
   color: green;
   text-align: center;
 }
 
-#color {
+#color-meetup {
   width: 300px;
   height: 300px;
   margin: 0 auto;
   color: red;
 }
 
-button {
+#button-meetup {
   cursor: pointer;
   display: block;
   width: 100px;
