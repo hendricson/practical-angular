@@ -1,0 +1,46 @@
+{
+  "name": "meetup01-example05",
+  "version": "1.0.0",
+  "description": "Example #05 for meetup #01",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --hot --inline",
+    "postinstall":"npm run typings-install",
+	"server": "webpack-dev-server --config webpack.config.dev.js --inline --colors --hot --progress --display-error-details --display-cached --port 8080 --content-base src",
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"typings-install": "typings install" 
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hendricson/repository.git"
+  },
+  "dependencies": {
+    "@angular/common": "^2.0.0-rc.4",
+    "@angular/compiler": "^2.0.0-rc.4",
+    "@angular/core": "^2.0.0-rc.4",
+    "@angular/platform-browser": "^2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.4",
+    "bootstrap": "github:twbs/bootstrap#v4-dev",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "font-awesome": "^4.6.3",
+    "html-webpack-plugin": "^2.21.0",
+    "jquery": "^3.0.0",
+    "node-sass": "^3.8.0",
+    "raw-loader": "^0.5.1",
+    "rxjs": "^5.0.0-beta.6",
+    "sass-loader": "^3.2.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.1"
+  }
+}

@@ -1,2 +1,2 @@
-# practical-angular-day1
+# Practical Angular Meetings
 Supplementary materials
