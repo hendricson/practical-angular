@@ -1,12 +1,11 @@
 import { Component} from '@angular/core';
-import { Router }           from '@angular/router';
 
 import { Modal } from '../modal';
 
 @Component({
-  selector: 'home',
+  selector: 'home-random',
   directives: [Modal],
-  templateUrl: 'app/home/home.html'
+  templateUrl: 'app/home/home.template.html'
 })
 export class HomeComponent{
 
